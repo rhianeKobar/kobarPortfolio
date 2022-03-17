@@ -1,0 +1,34 @@
+//variables
+$background-colour: #8ECAE6;
+$secondary: #023047;
+$blue-2: #219EBC;
+
+//mixins
+@mixin center-flex {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	//width:100%;
+}
+
+//atributes
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Sen', sans-serif;
+	overflow-x: hidden;
+	scrollbar-width: none;
+}
+
+// html,body{
+// }
+.App{
+	height: 100vh;
+	background-color: $background-colour;
+	overflow-x: hidden;
+	scroll-behavior: smooth;
+	scroll-snap-type: y mandatory;
+}
+
+

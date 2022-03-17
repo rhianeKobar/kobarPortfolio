@@ -1,0 +1,108 @@
+@import "../../global.scss";
+
+.telly{
+	width: 317px;
+	height: 550px;
+	display: grid;
+	grid-template-rows: 3fr 1fr;
+
+	.tv-screen{
+		justify-self: center;
+		align-self: center;
+		padding:1%;
+		background-color: $background-colour;
+		border-radius: 5px;
+		img{
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+			border-radius: 5%;
+			cursor: pointer;
+			width:100%;
+			height:100%;
+			margin:1%;
+		}
+		@keyframes wave{
+			0%{transform: rotate(-16deg) translate(-10%,-10%);}
+			50%{transform: rotate(16deg) translate(-10%,-10%);}
+			100%{transform: rotate(-16deg) translate(-10%,-10%);}
+		}
+		.animate{
+			height:70%;
+			width: 100%;
+			margin-top: 15%;
+			animation-name: wave;
+			animation-duration: 1s;
+			animation-timing-function: linear;
+			animation-iteration-count: infinite;
+		}
+		.fit-image{
+			max-height:360px;
+		}
+	}
+	.tv-buttons{
+		border-radius: 10px;
+		display: flex;
+		align-items: center;
+		justify-content: space-evenly;
+
+		button{
+			border:none;
+		}
+		.btn{
+			color: $secondary;
+			border-radius:100px;
+			width: 63.61px;
+			height: 64.38px;
+			background: $background-colour;
+			box-shadow: -2px -2px 2px #EDEDED, 2px 2px 2px #2887B4;
+			border-radius: 25px;
+			cursor: pointer;
+			transition: all 200ms linear; 
+			@include center-flex;
+		}
+		.btn:active, .btn:hover{
+			box-shadow: inset -2px -2px 2px #EDEDED, inset 2px 2px 2px #2887B4;
+			transform: translateY(2px);
+			transition: all 200ms linear; 
+		}
+	}
+	.image{
+		height:10%;
+		width:3.5%;
+		align-self: flex-start;
+		position: absolute;
+		bottom: 0;
+		left:0;
+	}
+}
+@media screen and (max-height:853px){
+	.telly{
+		.animate{
+			margin-top: 50px;
+		}
+		.image{
+			height:12%;
+			width:5%;
+			align-self: flex-start;
+			position: absolute;
+			bottom: 0;
+			left:0;
+		}
+	}
+}
+@media screen and (max-width:944px){
+	.telly{
+		.animate{
+			margin-top: 50px;
+		}
+	}
+}
+@media screen and (max-width:584px){
+	.telly{
+		.animate{
+			margin-top: 50px;
+		}
+	}
+}
+

@@ -1,0 +1,58 @@
+@import "../../global.scss";
+
+.navbar{
+	height:100%;
+	width: 100%;
+	z-index: 10;
+	text-align: center;
+	display: inline;
+	padding:1%;
+	
+
+	a{
+		display: inline-block;
+		margin-left:5%;
+		margin-right:5%;
+		font-size: 1.5em;
+		cursor: pointer;
+		text-decoration: none;
+		color: $secondary;
+		border-radius: 8px;
+		padding:1%;
+		box-shadow: 4px 4px 8px 2px #2887B4, -2px -2px 2px #E2F1F9;
+		height:48px;
+		width:125px;
+		transition: all 200ms linear; 
+	}
+	
+	a:hover{
+		box-shadow: inset -2px -2px 4px #E2F1F9, inset 2px 2px 4px #2887B4;
+		transform: translate(2px,4px);
+		transition: all 200ms linear; 
+	}
+
+}
+.active{
+	background-color: $secondary;
+	color: $background-colour;
+	position: fixed;
+	overflow-y: hidden;
+	top:0;
+	@include center-flex;
+
+	a:hover{
+		text-decoration: underline $background-colour solid 20%;
+	}
+}
+
+@media screen and (max-width:650px){
+	.navbar{
+		margin-top: 15px;
+		a{
+			height:30px;
+			width:75px;
+			font-size: 1em;
+			border-radius: 4px;
+		}
+	}
+}

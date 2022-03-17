@@ -1,0 +1,27 @@
+@import "../../global.scss";
+
+.links{
+	height:100%;
+	width:100%;
+	display: flex;
+	grid-column: 3;
+	justify-content: space-evenly;
+	align-items: center;
+	padding:1%;
+
+	.link{
+		cursor: pointer;
+		position: relative;
+		color: $secondary;
+		padding:1%;
+	}
+
+	.link:hover{
+		color: $blue-2;
+	}
+}
+@media screen and (max-width: 1142px) {
+	.links {
+		display:none;
+  }
+}
