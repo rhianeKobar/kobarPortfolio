@@ -1,14 +1,18 @@
 import "./global.scss"
-import Home from "./components/home/Home"
+import Intro from "./components/intro/Intro"
+import Sticky from "./components/sticky/Sticky"
 import Connect from "./components/connect/Connect"
 import Projects from "./components/projects/Projects"
 
 function App() {
   return (
     <div id='app' className="App">
-			<Home/>
-			<Projects/>
-			<Connect/>			
+			<Sticky/>	
+			<div className="sections">
+				<Intro/>
+				<Projects/>
+				<Connect/>
+			</div>
     </div>
   );
 }

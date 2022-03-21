@@ -1,27 +1,26 @@
 import "./sticky.scss";
 import "../intro/Intro.jsx"
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 
 export default function Sticky() {
-	const[stickyNavbar,setStickyNavbar] = useState(false)
-	const stickNavbar = (e) => {
-		// let nav = document.getElementById('nav');
-		// let navTop = nav.getBoundingClientRect().top
-		// let intro = document.getElementById('intro');
-		// let introBottom = intro.getBoundingClientRect().bottom
-		
-	}
-	useEffect(()=>{
-		window.addEventListener('wheel', stickNavbar);
-	});
 
+	const homeBtn = useRef(null)
+	const projectsBtn = useRef(null)
+	const connectBtn = useRef(null)
+
+	const[activeTab,setActiveTab] = useState(1)
 	
 
+	const handleTabClick = (index) => {
+		setActiveTab(index)
+	}
+
+	useEffect(()=>{},[homeBtn,projectsBtn,connectBtn])
 	return (
-		<nav id='nav' className={stickyNavbar? 'navbar active':'navbar'}>
-			<a href="#projects">Projects</a>
-			<a href="#skills">Skills</a>
-			<a href="#connect">Connect</a>
+		<nav id='nav' className='navbar'>
+			<a href="#intro" ref={homeBtn} id="homeBtn" onClick={()=> handleTabClick(1)} className={activeTab === 1?'active':''}>Home</a>
+			<a href="#projects" ref={projectsBtn} id="projectsBtn" onClick={()=> handleTabClick(2)} className={activeTab === 2?'active':''}>Projects</a>
+			<a href="#connect" ref={connectBtn} id="connectBtn" onClick={()=> handleTabClick(3)} className={activeTab === 3?'active':''}>Connect</a>
 		</nav>
 	);
 }

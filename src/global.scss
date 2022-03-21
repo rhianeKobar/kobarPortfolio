@@ -27,8 +27,15 @@ $blue-2: #219EBC;
 	height: 100vh;
 	background-color: $background-colour;
 	overflow-x: hidden;
-	scroll-behavior: smooth;
-	scroll-snap-type: y mandatory;
+
+	.sections{
+		width: 100%;
+		height: calc(100vh - 100px);
+		position: relative;
+		top:100px;
+		scroll-behavior: smooth;
+		scroll-snap-type: y mandatory;
+	}
 }
 
 

@@ -70,31 +70,39 @@
 	.image{
 		height:10%;
 		width:3.5%;
-		align-self: flex-start;
 		position: absolute;
-		bottom: 0;
+		bottom:0;
 		left:0;
 	}
 }
-@media screen and (max-height:853px){
-	.telly{
-		.animate{
-			margin-top: 50px;
-		}
-		.image{
-			height:12%;
-			width:5%;
-			align-self: flex-start;
-			position: absolute;
-			bottom: 0;
-			left:0;
-		}
-	}
-}
+
 @media screen and (max-width:944px){
 	.telly{
 		.animate{
 			margin-top: 50px;
+		}
+	}
+}
+@media screen and (max-width:820px) and (max-height:1180px){
+	.telly{
+		.image{
+			height:10%;
+			width:8%;
+		}
+	}
+}
+@media screen and (max-height:603px){
+	.telly{
+		height:350px;
+		.tv-screen{
+			.fit-image{
+				max-height:262.5px;
+			}
+		}
+		.image{
+			height:13%;
+			width:3.5%;
+			align-self: flex-start;
 		}
 	}
 }

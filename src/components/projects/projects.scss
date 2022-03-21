@@ -1,9 +1,8 @@
 @import "../../global.scss";
 
 .projects{
-	width: 100%;
-	height: calc(100vh - 10%);
-	position: relative;		
-	top:10%;
+	width:100vw;
 	scroll-snap-align: start;
+	height: calc(100vh - 100px);
+	@include center-flex;
 }
