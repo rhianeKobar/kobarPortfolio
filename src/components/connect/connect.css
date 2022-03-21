@@ -1,0 +1,55 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Sen', sans-serif;
+  overflow-x: hidden;
+  scrollbar-width: none;
+}
+
+.App {
+  height: 100vh;
+  background-color: #8ECAE6;
+  overflow-x: hidden;
+}
+
+.App .sections {
+  width: 100%;
+  height: calc(100vh - 100px);
+  position: relative;
+  top: 100px;
+  scroll-behavior: smooth;
+  -ms-scroll-snap-type: y mandatory;
+      scroll-snap-type: y mandatory;
+}
+
+.connect {
+  width: 100vw;
+  scroll-snap-align: start;
+  height: calc(100vh - 100px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1.5em;
+}
+
+@media screen and (max-width: 968px) {
+  .connect .info {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 642px) {
+  .connect .info {
+    padding: 5%;
+  }
+}
+/*# sourceMappingURL=connect.css.map */

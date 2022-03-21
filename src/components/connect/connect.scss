@@ -4,4 +4,21 @@
 	width:100vw;
 	scroll-snap-align: start;
 	height: calc(100vh - 100px);
+	@include center-flex;
+	font-size: 1.5em;
+	
+}
+@media screen and (max-width:968px){
+	.connect{
+		.info{
+			text-align: center;
+		}
+	}
+}
+@media screen and (max-width:642px){
+	.connect{
+		.info{
+			padding:5%;
+		}
+	}
 }

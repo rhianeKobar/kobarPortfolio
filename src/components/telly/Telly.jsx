@@ -16,7 +16,7 @@ export default function Telly() {
 
 	const getGif = () => {
 		const giphyAPIKey = 'Y1ZiOjpPWYQ5YZNYfkupuzx7e72ekLZa'
-		const giphyURL = `https://api.giphy.com/v1/gifs/random?api_key=${giphyAPIKey}&tag=wave+hello&rating=g`
+		const giphyURL = `https://api.giphy.com/v1/gifs/random?api_key=${giphyAPIKey}&tag=hello&rating=g`
 		
 		return Axios.get(giphyURL).then(response =>{
 			return response.data.data.images.original.url
