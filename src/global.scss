@@ -10,6 +10,11 @@ $blue-2: #219EBC;
 	align-items: center;
 	//width:100%;
 }
+@mixin inset-shadow{
+	box-shadow: inset -1px -1px 4px rgba(226, 241, 249, 0.5), inset 2px 2px 8px rgba(40, 135, 180, 0.6);
+	transform: translate(2px,2px);
+	transition: all 200ms linear; 
+}
 
 //atributes
 *{
@@ -30,12 +35,27 @@ $blue-2: #219EBC;
 
 	.sections{
 		width: 100%;
-		height: calc(100vh - 100px);
+		height: calc(100vh - 150px);
 		position: relative;
-		top:100px;
+		top:150px;
 		scroll-behavior: smooth;
 		scroll-snap-type: y mandatory;
 	}
 }
-
+@media screen and (max-width:1366px) and (max-height:768px){
+	.App{
+		.sections{
+			height: calc(100vh - 100px);
+			top:100px;
+		}
+	}
+}
+@media screen and (max-width:414px) and (max-height:896px){
+	.App{
+		.sections{
+			height: calc(100vh - 100px);
+			top:100px;
+		}
+	}
+}
 

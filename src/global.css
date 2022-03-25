@@ -16,11 +16,25 @@
 
 .App .sections {
   width: 100%;
-  height: calc(100vh - 100px);
+  height: calc(100vh - 150px);
   position: relative;
-  top: 100px;
+  top: 150px;
   scroll-behavior: smooth;
   -ms-scroll-snap-type: y mandatory;
       scroll-snap-type: y mandatory;
+}
+
+@media screen and (max-width: 1366px) and (max-height: 768px) {
+  .App .sections {
+    height: calc(100vh - 100px);
+    top: 100px;
+  }
+}
+
+@media screen and (max-width: 414px) and (max-height: 896px) {
+  .App .sections {
+    height: calc(100vh - 100px);
+    top: 100px;
+  }
 }
 /*# sourceMappingURL=global.css.map */

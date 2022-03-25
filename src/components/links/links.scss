@@ -14,16 +14,30 @@
 		cursor: pointer;
 		position: relative;
 		color: $secondary;
-		padding:1%;
+		// padding:1%;
+		height:50px;
+		width:50px;
+		@include center-flex;
+		justify-content: center;
+		border-radius: 100%;
+		box-shadow: -2px -2px 8px rgba(226, 241, 249, 0.5), 2px 2px 8px rgba(40, 135, 180, 0.6);
 	}
 
 	.link:hover{
 		color: $blue-2;
+		box-shadow: inset -2px -2px 8px rgba(226, 241, 249, 0.5), inset 2px 2px 8px rgba(40, 135, 180, 0.6);
 	}
 }
-@media screen and (max-width:968px){
+@media screen and (max-width:1366px) and (max-height:768px){
 	.links{
-		margin-top: 70px;
+		margin-top: 25px;
 		margin-bottom: 25px;
+	}
+}
+@media screen and (max-width:414px) and (max-height:896px){
+	.links{
+		margin-top: 25px;
+		margin-bottom: 25px;
+		width:100%;
 	}
 }

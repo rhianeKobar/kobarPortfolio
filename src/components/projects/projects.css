@@ -16,12 +16,26 @@
 
 .App .sections {
   width: 100%;
-  height: calc(100vh - 100px);
+  height: calc(100vh - 150px);
   position: relative;
-  top: 100px;
+  top: 150px;
   scroll-behavior: smooth;
   -ms-scroll-snap-type: y mandatory;
       scroll-snap-type: y mandatory;
+}
+
+@media screen and (max-width: 1366px) and (max-height: 768px) {
+  .App .sections {
+    height: calc(100vh - 100px);
+    top: 100px;
+  }
+}
+
+@media screen and (max-width: 414px) and (max-height: 896px) {
+  .App .sections {
+    height: calc(100vh - 100px);
+    top: 100px;
+  }
 }
 
 .projects {
@@ -38,5 +52,111 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -ms-flex-flow: row wrap;
+      flex-flow: row wrap;
+  -webkit-box-flex: 100%;
+      -ms-flex: 100%;
+          flex: 100%;
+  position: relative;
+}
+
+.projects .container {
+  position: relative;
+  width: 325px;
+  height: 250px;
+  border-radius: 20px;
+  background-color: #8ECAE6;
+  margin: 2% 100px;
+  font-family: 'Fira Sans', sans-serif;
+  -webkit-box-shadow: -2px -2px 8px rgba(226, 241, 249, 0.5), 2px 2px 8px rgba(40, 135, 180, 0.6);
+          box-shadow: -2px -2px 8px rgba(226, 241, 249, 0.5), 2px 2px 8px rgba(40, 135, 180, 0.6);
+}
+
+.projects .container .preview {
+  width: 100%;
+  height: 70%;
+  -webkit-transition: all 200ms linear;
+  transition: all 200ms linear;
+}
+
+.projects .container .description {
+  -webkit-transition: all 200ms linear;
+  transition: all 200ms linear;
+  width: 100%;
+  padding: 1%;
+  text-align: center;
+  position: relative;
+  height: 30%;
+  font-size: 1em;
+}
+
+.projects .container .description h3 {
+  font-size: 1.5rem;
+  margin-top: 15px;
+}
+
+.projects .container .description p {
+  font-family: 'Fira Sans', sans-serif;
+  font-weight: 400;
+  -webkit-transition: all 300ms linear;
+  transition: all 300ms linear;
+  opacity: 0;
+}
+
+.projects .container .btn {
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  right: 10px;
+  top: 10px;
+  background-color: #8ECAE6;
+  border: none;
+  border-radius: 100%;
+  z-index: 5;
+}
+
+.projects .container:hover .preview, .projects .container:active .preview {
+  height: 0%;
+}
+
+.projects .container:hover .description, .projects .container:active .description {
+  height: 100%;
+}
+
+.projects .container:hover .description p, .projects .container:active .description p {
+  opacity: 1;
+  margin-top: 20px;
+}
+
+.projects .container:hover .btn, .projects .container:active .btn {
+  opacity: 0;
+}
+
+@media screen and (max-width: 1366px) and (max-height: 768px) {
+  .projects .container {
+    width: 275px;
+    height: 200px;
+  }
+  .projects .container .description h3 {
+    font-size: 1.3rem;
+    margin-top: 10px;
+  }
+  .projects .container .description p {
+    font-family: 'Fira Sans', sans-serif;
+    font-weight: 400;
+    -webkit-transition: all 300ms linear;
+    transition: all 300ms linear;
+    opacity: 0;
+    font-size: 0.85em;
+  }
+}
+
+@media screen and (max-width: 414px) and (max-height: 896px) {
+  .projects .container {
+    margin: 2%;
+  }
 }
 /*# sourceMappingURL=projects.css.map */

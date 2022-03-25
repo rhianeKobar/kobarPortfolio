@@ -8,7 +8,7 @@ export default function Connect() {
 			<div className="info">
 				<p>Let's collaborate!</p>
 				<p>Connect with me through the links above or <a href="mailto:shakira@nowitworkstech.com">email</a> me @ shakira@nowitworkstech.com</p>
-				<p>I'm open to freelance, contract and volunteering opportunities.</p> 
+				<p>I'm open to freelance, contract and volunteering opportunities in web/software development and UX/UI design.</p> 
 			</div>
 		</div>
 	);

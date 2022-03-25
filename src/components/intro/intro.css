@@ -16,12 +16,26 @@
 
 .App .sections {
   width: 100%;
-  height: calc(100vh - 100px);
+  height: calc(100vh - 150px);
   position: relative;
-  top: 100px;
+  top: 150px;
   scroll-behavior: smooth;
   -ms-scroll-snap-type: y mandatory;
       scroll-snap-type: y mandatory;
+}
+
+@media screen and (max-width: 1366px) and (max-height: 768px) {
+  .App .sections {
+    height: calc(100vh - 100px);
+    top: 100px;
+  }
+}
+
+@media screen and (max-width: 414px) and (max-height: 896px) {
+  .App .sections {
+    height: calc(100vh - 100px);
+    top: 100px;
+  }
 }
 
 .intro {
@@ -35,90 +49,77 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   width: 100vw;
   scroll-snap-align: start;
-  height: calc(100vh - 100px);
+  height: calc(100vh - 110px);
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  position: relative;
 }
 
 .intro h1 {
   font-size: 4em;
+  text-align: center;
 }
 
 .intro h3 {
   font-family: 'Fira Sans', sans-serif;
   font-weight: 100;
   font-size: 2.5em;
+  text-align: center;
 }
 
-@media screen and (max-width: 944px) {
-  .intro {
-    text-align: center;
-  }
-  .intro h1 {
-    font-size: 3em;
-    height: 18%;
-  }
-  .intro h3 {
-    font-size: 1.9em;
-    margin-top: 10px;
-    height: 10%;
-  }
-}
-
-@media screen and (max-width: 853px) {
+@media screen and (max-width: 1920px) and (max-height: 1080px) {
   .intro {
     padding-top: 0;
-  }
-  .intro h1 {
-    height: 18%;
-    font-size: 2em;
-  }
-  .intro h3 {
-    height: 12%;
-    font: size 0.8em;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    height: calc(100vh - 150px);
   }
 }
 
-@media screen and (max-width: 820px) and (max-height: 1180px) {
+@media screen and (max-width: 1366px) and (max-height: 768px) {
+  .intro {
+    height: calc(100vh - 100px);
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
   .intro h1 {
     font-size: 3em;
-    height: 8%;
   }
   .intro h3 {
-    font-size: 1.9em;
-    height: 9%;
+    font-size: 1.8em;
   }
 }
 
-@media screen and (max-width: 584px) {
+@media screen and (max-width: 414px) and (max-height: 896px) {
+  .intro {
+    height: calc(100vh - 100px);
+  }
   .intro h1 {
-    font-size: 2.3em;
-    height: 12%;
+    text-align: center;
+    font-size: 2.5em;
   }
   .intro h3 {
     font-size: 1.5em;
-    margin-top: 10px;
   }
 }
 
-@media screen and (max-height: 774px) {
+@media screen and (max-width: 375px) and (max-height: 667px) {
   .intro {
     padding-top: 0;
-    margin-top: 0px;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
   }
   .intro h1 {
-    font-size: 2.5em;
-    height: 100px;
+    font-size: 1.5em;
+    height: 50px;
   }
   .intro h3 {
-    font-size: 1.9em;
+    font-size: 1.2em;
   }
 }
 /*# sourceMappingURL=intro.css.map */
