@@ -5,8 +5,7 @@ import typingGameImg from "../../Resources/typingGame.png"
 import iobookImg from "../../Resources/iobookImg.png"
 import kickaboutImg from "../../Resources/kickabout.png"
 import Tippy from '@tippyjs/react';
-import 'tippy.js/dist/tippy.css';
-import { useState, useEffect, useRef } from "react";
+import 'tippy.js/dist/tippy.css'
 
 export default function Projects() {
 

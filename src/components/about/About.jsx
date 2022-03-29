@@ -9,12 +9,11 @@ export default function About() {
 				coding bootcamp. Now I'm super excited to work on/contribute to new/existing projects 
 				that help me strengthen and expand my skillset and meet incredible techies.
 			</p>
-			<p>
-				Put me to work on anything (ethical).  
-				I'm especially interested in the areas of open source, sustainability, accessibility, AI, 
-				communication, data analysis, gaming, security, mobile, transport and education. I love 
-				collaboration, everyone brings something of value to the table and it's great to have 
-				other people to bounce ideas off of. I'm also comfortable working alone or isolated. I'd 
+			<p>  
+				Let's work together! I love collaboration, everyone brings something of value to the table and it's great to have 
+				other people to bounce ideas off. I'm also comfortable working alone or isolated from my team. I'm especially 
+				interested in the areas of open source, sustainability, accessibility, AI, 
+				communication, data analysis, gaming, security, mobile, transport and education. I'd 
 				be really excited to work with a remote team using tech for good that recognises the 
 				importance of diversity and inclusion especially in tech.
 			</p>

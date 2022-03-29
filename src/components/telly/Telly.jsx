@@ -8,6 +8,7 @@ import giphyBadge from "../../Resources/Poweredby_640px_Badge.gif"
 
 export default function Telly() {
 	const [clicked, setClicked] = useState(false)
+	const [altDescription, setAltDescription] = useState(false)
 	const [imgs, setImgs] = useState([Wave])
 	const [channel, setChannel] = useState(0)
 
@@ -17,16 +18,19 @@ export default function Telly() {
 	const getGif = () => {
 		const giphyAPIKey = 'Y1ZiOjpPWYQ5YZNYfkupuzx7e72ekLZa'
 		const giphyURL = `https://api.giphy.com/v1/gifs/random?api_key=${giphyAPIKey}&tag=hello&rating=g`
-		
+
 		return Axios.get(giphyURL).then(response =>{
 			return response.data.data.images.original.url
-		})
+		}).catch(e => alert("If you wanna see what happens you'll have to disable your adblocker..it's totally worth it!"))
 	}
 	
 	const pushGifUrl = (gifUrl) => {
-		setImgs(prevImgs => [
-			...prevImgs, gifUrl
-		])
+		if(gifUrl != null){
+			setImgs(prevImgs => [...prevImgs, gifUrl])
+			nextChannel()
+			setAltDescription(true)
+  		setClicked(true)	
+		}
 	}
 
 	const nextChannel = () =>{
@@ -39,29 +43,29 @@ export default function Telly() {
 
 	const handleNextBtn = () => {
 		if(imgs.length > channel + 1){
-			nextChannel() 
+			nextChannel()
+  		setClicked(true)
 		}else{
 			getGif().then((res)=>{ 
 				pushGifUrl(res)
-				nextChannel()
-			})
+			})		
 		}
-		setClicked(true)
 	}
 	
 	const handlePrevBtn = () => {
 		prevChannel()
 		if(channel === 1){
 			setClicked(false)
+			setAltDescription(false)
 		}	
 	}
 
-	useEffect(()=>{},[clicked,imgs,channel])
+	useEffect(()=>{},[clicked,altDescription,imgs,channel])
 		
 	return (
 		<div className='telly'>
 			<div className="tv-screen">
-				<img src={imgs[channel]} alt="black hand waving" className={clicked ? "fit-image" : "animate"}/>
+				<img src={imgs[channel]} alt={altDescription ? "random gif representing 'hello'" : "animated image of the hand waving emoji"} className={clicked ? "fit-image" : "animate"}/>
 			</div>
 			<div className="tv-buttons">
 				<button className="btn" ref={prevBtn} disabled={clicked ? false : true} onClick={handlePrevBtn}>
