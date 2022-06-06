@@ -1,4 +1,6 @@
 import "./projects.scss";
+import { useState } from "react";
+import { CSSTransition } from "react-transition-group";
 import FeatherIcon from 'feather-icons-react';
 import thermostatImg from "../../Resources/thermostat.png"
 import typingGameImg from "../../Resources/typingGame.png"
@@ -9,7 +11,8 @@ import 'tippy.js/dist/tippy.css'
 
 export default function Projects() {
 
-	// const [showInfo,setShowInfo] = useState(0);
+	const [index,setIndex] = useState(false);
+	const [showInfo, setShowInfo] = useState(false);
 
 	// const thermo = useRef(null)
 	// const typingGame = useRef(null)
@@ -18,25 +21,38 @@ export default function Projects() {
 
 	// const toggleInfo = (index) => {
 	// 	console.log(index)
-	// 	setShowInfo(index)
+	// 	setIndex(index)
 	// }
 	// useEffect(()=>{},[thermo,typingGame,iobook,kickabout])
+	const handleHover = (index) => {
+		setIndex(index)
+		// setShowInfo(true)
+	}
+
+	const handleMouseOut = () => {
+		setIndex(0)
+		// setShowInfo(false)
+	}
 
 
 	function Project(props){
 		return(
-			<div className="container">
-				<img src={props.img} alt={props.name} className="preview" />
-				<div className="description">
-					<h3>{props.name}</h3>
-					<p>{props.description}</p>
-				</div>
-				<Tippy content="View code">
-					<button className="btn" onClick={()=> window.open(props.url)}>
-						<FeatherIcon icon='code'/>	
-					</button>
-				</Tippy>
-			</div>
+			
+				<div className={index === props.index ? "hover hover-enter" : "hover hover-exit"}>
+					<img src={props.img} alt={props.name} className="preview" />
+					<CSSTransition in={true} timeout={500} classNames="hover">
+							<div className="description" onMouseOver={() => handleHover(props.index)} onMouseOut={() => handleMouseOut()} onClick={() => handleHover(props.index)}>
+								<h3>{props.name}</h3>
+								<p>{props.description}</p>
+							</div>
+					</CSSTransition>
+					<Tippy content="View code">
+						<button className="btn" onClick={()=> window.open(props.url)} title='view project code'>
+							<FeatherIcon icon='code'/>	
+						</button>
+					</Tippy>
+				</div>	
+			
 		);
 	}
 

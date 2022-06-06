@@ -68,10 +68,10 @@ export default function Telly() {
 				<img src={imgs[channel]} alt={altDescription ? "random gif representing 'hello'" : "animated image of the hand waving emoji"} className={clicked ? "fit-image" : "animate"}/>
 			</div>
 			<div className="tv-buttons">
-				<button className="btn" ref={prevBtn} disabled={clicked ? false : true} onClick={handlePrevBtn}>
+				<button className="btn" ref={prevBtn} disabled={clicked ? false : true} onClick={handlePrevBtn}  title='previous button'>
 					<FeatherIcon icon='chevron-left' size='64'/>
 				</button>
-				<button className="btn" ref={nextBtn} onClick={handleNextBtn}>
+				<button className="btn" ref={nextBtn} onClick={handleNextBtn} title='next button'>
 					<FeatherIcon icon='chevron-right' size='64'/>
 				</button>
 			</div>
