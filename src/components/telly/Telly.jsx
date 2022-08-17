@@ -69,10 +69,10 @@ export default function Telly() {
 			</div>
 			<div className="tv-buttons">
 				<button className="btn" ref={prevBtn} disabled={clicked ? false : true} onClick={handlePrevBtn}  title='previous button'>
-					<FeatherIcon icon='chevron-left' size='64'/>
+					<FeatherIcon icon='chevron-left' size='64' className='featherIcon'/>
 				</button>
 				<button className="btn" ref={nextBtn} onClick={handleNextBtn} title='next button'>
-					<FeatherIcon icon='chevron-right' size='64'/>
+					<FeatherIcon icon='chevron-right' size='64' className='featherIcon'/>
 				</button>
 			</div>
 			<img src={giphyBadge} alt="powered by giphy gif" className="image"/>

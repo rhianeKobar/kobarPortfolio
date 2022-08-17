@@ -8,28 +8,63 @@
 	position: fixed;
 	padding:1%;
 	margin-top: 50px;
-	display: flex;
+	display: inline-flex;
 	justify-content: center;
 	align-items: center;
 	background-color: $background-colour;
+
+	@keyframes fade-in{
+		0%{
+			box-shadow: inset -1px -1px 4px rgba(226, 241, 249, 0.5), inset 2px 2px 8px rgba(40, 135, 180, 0.6);
+			transform: translate(2px,2px);
+		}
+		33%{
+			box-shadow: inset -1px -1px 2px rgba(226, 241, 249, 0.5), inset 1px 1px 4px rgba(40, 135, 180, 0.6);
+			transform: translate(1px,1px);
+		}
+		66%{
+			box-shadow: -2px -2px 8px rgba(226, 241, 249, 0.5), 1px 1px 4px rgba(40, 135, 180, 0.6);
+		}
+		100%{
+			box-shadow: -4px -4px 12px rgba(226, 241, 249, 0.5), 2px 2px 8px rgba(40, 135, 180, 0.6);
+		}
+	}
 
 	a{
 		display: inline-block;
 		margin-left:5%;
 		margin-right:5%;
-		font-size: 1.5em;
 		cursor: pointer;
 		text-decoration: none;
 		color: $secondary;
-		border-radius: 10px;
-		padding:1%;
-		box-shadow:  -4px -4px 12px rgba(226, 241, 249, 0.5), 2px 2px 8px rgba(40, 135, 180, 0.6);
+		box-shadow: -4px -4px 12px rgba(226, 241, 249, 0.5), 2px 2px 8px rgba(40, 135, 180, 0.6);
 		height:48px;
 		width:125px;
 		transition: all 200ms linear; 
 		display: flex;
 		justify-content: center;
 		align-items: center;
+		animation-name: fade-in;
+		animation-duration: 500ms;
+		animation-timing-function: ease-out;
+		animation-iteration-count: 1;
+		@keyframes slide-down{
+			0%{
+				transform: translateY(-100px);
+				opacity: 0;
+			}
+			100%{
+				transform: translate(0px);
+				opacity: 1;
+			}
+		}
+		div{
+			width: 100%;
+			animation-name: slide-down;
+			animation-duration: 2s;
+			animation-timing-function: linear;
+			animation-iteration-count: 1;
+		}
 	}
 	
 	a:hover{

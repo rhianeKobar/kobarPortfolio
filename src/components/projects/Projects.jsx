@@ -34,7 +34,6 @@ export default function Projects() {
 		// setShowInfo(false)
 	}
 
-
 	function Project(props){
 		return(
 			

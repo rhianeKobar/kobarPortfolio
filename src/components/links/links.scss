@@ -1,5 +1,7 @@
 @import "../../global.scss";
 
+
+
 .links{
 	// height:100%;
 	margin-top: 100px;
@@ -14,7 +16,6 @@
 		cursor: pointer;
 		position: relative;
 		color: $secondary;
-		// padding:1%;
 		height:50px;
 		width:50px;
 		@include center-flex;

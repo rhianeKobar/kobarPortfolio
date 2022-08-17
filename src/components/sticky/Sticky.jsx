@@ -17,12 +17,13 @@ export default function Sticky() {
 	}
 
 	useEffect(()=>{},[homeBtn,projectsBtn,aboutBtn,connectBtn])
+
 	return (
 		<nav id='nav' className='navbar'>
-			<a href="#intro" ref={homeBtn} id="homeBtn" onClick={()=> handleTabClick(1)} className={activeTab === 1?'active':''}>Home</a>
-			<a href="#projects" ref={projectsBtn} id="projectsBtn" onClick={()=> handleTabClick(2)} className={activeTab === 2?'active':''}>Projects</a>
-			<a href="#about" ref={aboutBtn} id="aboutBtn" onClick={()=> handleTabClick(3)} className={activeTab === 3?'active':''}>About</a>
-			<a href="#connect" ref={connectBtn} id="connectBtn" onClick={()=> handleTabClick(4)} className={activeTab === 4?'active':''}>Connect</a>
+			<a href="#intro" ref={homeBtn} id="homeBtn" onClick={()=> handleTabClick(1)} className={activeTab === 1?'active ':''}><div>Home</div></a>
+			<a href="#projects" ref={projectsBtn} id="projectsBtn" onClick={()=> handleTabClick(2)} className={activeTab === 2?'active ':''}><div>Projects</div></a>
+			<a href="#about" ref={aboutBtn} id="aboutBtn" onClick={()=> handleTabClick(3)} className={activeTab === 3?'active ':''}><div>About</div></a>
+			<a href="#connect" ref={connectBtn} id="connectBtn" onClick={()=> handleTabClick(4)} className={activeTab === 4?'active ':''}><div>Connect</div></a>
 		</nav>
 	);
 }

@@ -11,9 +11,29 @@
 	height: calc(100vh - 110px);
 	justify-content: center;
 
+	@keyframes shrink{
+		0%{
+			font-size: 4.5em;
+			opacity: 0;
+			width: 100%;
+		}
+		50%{
+			font-size: 4.2em;
+			opacity: 0;
+			width: 100%;
+		}
+		100%{
+			opacity: 1;
+		}
+	}
+
 	h1{
 		font-size: 4em;
 		text-align: center;
+		animation-name: shrink;
+		animation-duration: 2s;
+		animation-timing-function: linear;
+		animation-iteration-count: 1;
 	}
 	h3{
 		font-family: 'Fira Sans', sans-serif;

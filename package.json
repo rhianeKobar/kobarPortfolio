@@ -1,6 +1,6 @@
 {
   "name": "kobar-portfolio",
-  "homepage": "https://nowitworkstech.com/",
+  "homepage": ".",
   "version": "0.1.0",
   "private": true,
   "proxy": "https://api.giphy.com/v1/gifs",
