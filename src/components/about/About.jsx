@@ -20,7 +20,7 @@ export default function About() {
 				I'm currently looking for freelance/contract work. Ideally, I 
 				like to work solo as it's more time flexible but working collaboratively hasn't been 
 				a problem in the past and it provides the opportunity to learn and teach. I'd 
-				be really excited to work with a remotely using tech for good and if I'm part of a team, one  
+				be really excited to work with remotely using tech for good and if I'm part of a team, one  
 				that recognises the importance of diversity and inclusion especially in tech.
 			</p>
 

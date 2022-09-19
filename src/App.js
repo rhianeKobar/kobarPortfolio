@@ -1,4 +1,9 @@
-import "./global.scss"
+import "./global.scss";
+import {
+  BrowserRouter as Router,
+	Routes,
+  Route,
+} from "react-router-dom";
 import Intro from "./components/intro/Intro"
 import Sticky from "./components/sticky/Sticky"
 import Connect from "./components/connect/Connect"
@@ -7,15 +12,19 @@ import About from "./components/about/About"
 
 function App() {
   return (
-    <div id='app' className="App">
-			<Sticky/>	
-			<div className="sections">
-				<Intro/>
-				<Projects/>
-				<About/>
-				<Connect/>
+		<Router>
+			<div id='app' className="App">
+				<Sticky/>	
+				<div className="sections">
+						<Routes>
+							<Route exact path="/" element={<Intro/>}/>
+							<Route path="/projects" element={<Projects/>}/>
+							<Route path="/about" element={<About/>}/>
+							<Route path="/connect" element={<Connect/>}/>
+						</Routes>
+				</div>
 			</div>
-    </div>
+		</Router>
   );
 }
 

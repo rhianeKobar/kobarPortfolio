@@ -30,7 +30,7 @@
 		}
 	}
 
-	a{
+	.link{
 		display: inline-block;
 		margin-left:5%;
 		margin-right:5%;
@@ -67,7 +67,7 @@
 		}
 	}
 	
-	a:hover{
+	.link:hover{
 		@include inset-shadow;
 	}
 	.active{
@@ -78,7 +78,7 @@
 @media screen and (max-width:1366px) and (max-height:768px){
 	.navbar{
 		margin-top: 0px;
-		a{
+		.link{
 			height:35px;
 			width:90px;
 			font-size: 1.1em;
@@ -89,7 +89,7 @@
 @media screen and (max-width:414px) and (max-height:896px){
 	.navbar{
 		margin-top: 5px;
-		a{
+		.link{
 			margin-left:3%;
 			margin-right:3%;
 			height:35px;
