@@ -3,6 +3,7 @@ import {
   BrowserRouter as Router,
 	Routes,
   Route,
+	Navigate,
 } from "react-router-dom";
 import Intro from "./components/intro/Intro"
 import Sticky from "./components/sticky/Sticky"
@@ -17,7 +18,8 @@ function App() {
 				<Sticky/>	
 				<div className="sections">
 						<Routes>
-							<Route exact path="/" element={<Intro/>}/>
+							<Route exact path="/" element={<Navigate to="/home"/>}/>
+							<Route exact path="/home" element={<Intro/>}/>
 							<Route path="/projects" element={<Projects/>}/>
 							<Route path="/about" element={<About/>}/>
 							<Route path="/connect" element={<Connect/>}/>

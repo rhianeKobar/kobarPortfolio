@@ -104,7 +104,7 @@
   }
 }
 
-.navbar a {
+.navbar .link {
   display: inline-block;
   margin-left: 5%;
   margin-right: 5%;
@@ -162,7 +162,7 @@
   }
 }
 
-.navbar a div {
+.navbar .link div {
   width: 100%;
   -webkit-animation-name: slide-down;
           animation-name: slide-down;
@@ -174,7 +174,7 @@
           animation-iteration-count: 1;
 }
 
-.navbar a:hover {
+.navbar .link:hover {
   -webkit-box-shadow: inset -1px -1px 4px rgba(226, 241, 249, 0.5), inset 2px 2px 8px rgba(40, 135, 180, 0.6);
           box-shadow: inset -1px -1px 4px rgba(226, 241, 249, 0.5), inset 2px 2px 8px rgba(40, 135, 180, 0.6);
   -webkit-transform: translate(2px, 2px);
@@ -196,7 +196,7 @@
   .navbar {
     margin-top: 0px;
   }
-  .navbar a {
+  .navbar .link {
     height: 35px;
     width: 90px;
     font-size: 1.1em;
@@ -208,7 +208,7 @@
   .navbar {
     margin-top: 5px;
   }
-  .navbar a {
+  .navbar .link {
     margin-left: 3%;
     margin-right: 3%;
     height: 35px;
