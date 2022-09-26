@@ -63,15 +63,15 @@ export default function Telly() {
 	useEffect(()=>{},[clicked,altDescription,imgs,channel])
 		
 	return (
-		<div className='telly'>
+		<div className='telly' data-testid="telly">
 			<div className="tv-screen">
 				<img src={imgs[channel]} alt={altDescription ? "random gif representing 'hello'" : "animated image of the hand waving emoji"} className={clicked ? "fit-image" : "animate"}/>
 			</div>
 			<div className="tv-buttons">
-				<button className="btn" ref={prevBtn} disabled={clicked ? false : true} onClick={handlePrevBtn}  title='previous button'>
+				<button data-testid="prevBtn" className="btn" ref={prevBtn} disabled={clicked ? false : true} onClick={handlePrevBtn}  title='previous button'>
 					<FeatherIcon icon='chevron-left' size='64' className='featherIcon'/>
 				</button>
-				<button className="btn" ref={nextBtn} onClick={handleNextBtn} title='next button'>
+				<button data-testid="nextBtn" className="btn" ref={nextBtn} onClick={handleNextBtn} title='next button'>
 					<FeatherIcon icon='chevron-right' size='64' className='featherIcon'/>
 				</button>
 			</div>
