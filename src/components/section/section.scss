@@ -1,0 +1,16 @@
+@import "../../global.scss";
+
+.section{
+	width:100vw;
+	@include center-flex;
+	// scroll-snap-align: start;
+	font-size: 0.8em;
+	padding-left: 5%;
+	padding-right: 5%;
+	line-height:2;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	h3{
+		font-size: 1.5em;
+	}
+}

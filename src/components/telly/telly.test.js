@@ -1,27 +1,23 @@
-import { render, screen, cleanup } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import Telly from './Telly';
 
 
-afterEach( () => {
-	cleanup();
-})
+render(<Telly/>)
+const telly = screen.getByTestId("telly")
+const prevBtn = screen.getByTitle(/previous button/)
+const nextBtn = screen.getByTitle(/next button/)
 
 describe("Telly component",() => {
-
-	render(<Telly/>)
-	const telly = screen.getByTestId("telly")
 
 	test("Telly should render", () => {
 		expect(telly).toBeInTheDocument();
 	})
 
 	test("Telly should have content",() => {
-		const prevbtn = screen.getByTestId("prevBtn")
-		const nextBtn = screen.getByTestId("nextBtn")
-
-		expect(prevbtn).toBeInTheDocument();
-		expect(nextBtn).toBeInTheDocument();
+		expect(telly).toContainElement(prevBtn)
+		expect(telly).toContainElement(nextBtn)
 	})
-	console.log(screen.debug(null, Infinity));
+
+	// console.log(screen.debug(null, Infinity));
 })
