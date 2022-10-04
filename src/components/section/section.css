@@ -16,9 +16,9 @@
 
 .App .sections {
   width: 100%;
-  height: calc(100vh - 150px);
+  height: calc(100vh - 100px);
   position: relative;
-  top: 150px;
+  top: 100px;
   scroll-behavior: smooth;
   -ms-scroll-snap-type: y mandatory;
       scroll-snap-type: y mandatory;
@@ -38,7 +38,7 @@
   }
 }
 
-.section {
+.about-section {
   width: 100vw;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -50,6 +50,10 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  scroll-snap-align: start;
   font-size: 0.8em;
   padding-left: 5%;
   padding-right: 5%;
@@ -58,7 +62,25 @@
   margin-bottom: 10px;
 }
 
-.section h3 {
-  font-size: 1.5em;
+.about-section h3 {
+  font-size: 28px;
+}
+
+@media screen and (max-width: 480px) and (max-height: 854px) {
+  .about-section {
+    font-size: 1em;
+  }
+}
+
+@media screen and (min-width: 960px) and (min-height: 540px) {
+  .about-section {
+    font-size: 1em;
+  }
+}
+
+@media screen and (min-width: 1366px) and (min-height: 768px) {
+  .about-section {
+    font-size: 1.1em;
+  }
 }
 /*# sourceMappingURL=section.css.map */

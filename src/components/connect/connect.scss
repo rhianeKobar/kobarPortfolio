@@ -31,8 +31,15 @@
 		font-size: 1.05em;
 		line-height: 2;
 		.info{
-			width: 80%;
+			width: 75%;
 		}
+	}
+}
+
+@media screen and (min-width:1366px) and (min-height:768px){
+	.connect{
+		font-size: 1.35em;
+		line-height: 2.4;
 	}
 }
 

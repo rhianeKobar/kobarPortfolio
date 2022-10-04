@@ -4,7 +4,6 @@ import Axios  from "axios"
 import Wave from "../../Resources/blackHandWave.png"
 import { useState,useRef, useEffect} from "react"
 import FeatherIcon from 'feather-icons-react'
-import giphyBadge from "../../Resources/Poweredby_640px_Badge.gif"
 
 export default function Telly() {
 	const [clicked, setClicked] = useState(false)
@@ -64,9 +63,6 @@ export default function Telly() {
 		
 	return (
 		<div className='telly' data-testid="telly">
-			<div className="tv-screen">
-				<img src={imgs[channel]} alt={altDescription ? "random gif representing 'hello'" : "animated image of the hand waving emoji"} className={clicked ? "fit-image" : "animate"}/>
-			</div>
 			<div className="tv-buttons">
 				<button data-testid="prevBtn" className="btn" ref={prevBtn} disabled={clicked ? false : true} onClick={handlePrevBtn}  title='previous button'>
 					<FeatherIcon icon='chevron-left' size='64' className='featherIcon'/>
@@ -74,8 +70,10 @@ export default function Telly() {
 				<button data-testid="nextBtn" className="btn" ref={nextBtn} onClick={handleNextBtn} title='next button'>
 					<FeatherIcon icon='chevron-right' size='64' className='featherIcon'/>
 				</button>
+			</div>	
+			<div className="tv-screen">
+				<img src={imgs[channel]} alt={altDescription ? "random gif representing 'hello'" : "animated image of the hand waving emoji"} className={clicked ? "fit-image" : "animate"}/>
 			</div>
-			<img src={giphyBadge} alt="powered by giphy gif" className="image"/>
 		</div>
 	)
 }

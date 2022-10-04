@@ -16,9 +16,9 @@
 
 .App .sections {
   width: 100%;
-  height: calc(100vh - 150px);
+  height: calc(100vh - 100px);
   position: relative;
-  top: 150px;
+  top: 100px;
   scroll-behavior: smooth;
   -ms-scroll-snap-type: y mandatory;
       scroll-snap-type: y mandatory;
@@ -45,9 +45,6 @@
   -webkit-transition: all 5s linear;
   transition: all 5s linear;
   position: relative;
-}
-
-.projects .container {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -67,19 +64,19 @@
   height: 100%;
 }
 
-.projects .container .project-container {
-  max-width: 400px;
-  max-height: 400px;
+.projects .project-container {
+  width: 280px;
+  height: 190px;
   margin: 20px;
   padding: 2%;
 }
 
-.projects .container .project-container h4 {
+.projects .project-container h4 {
   width: 100%;
   text-align: center;
 }
 
-.projects .container .project-container .project-img-container {
+.projects .project-container .project-img-container {
   margin-top: 5px;
   border-radius: 20px;
   width: 100%;
@@ -88,40 +85,34 @@
   padding: 5%;
 }
 
-.projects .container .project-container .project-img-container .project-img {
+.projects .project-container .project-img-container .project-img {
   border-radius: 20px;
   width: 100%;
+  height: 100%;
 }
 
-@media screen and (max-width: 1366px) and (max-height: 768px) {
-  .projects .hover-exit-active {
-    width: 20%;
-    height: 40%;
-  }
-  .projects .hover-exit-active .description h3 {
-    font-size: 1.3rem;
-    margin-top: 10px;
-  }
-  .projects .hover-exit-active .description p {
-    font-family: 'Fira Sans', sans-serif;
-    font-weight: 400;
-    -webkit-transition: all 300ms linear;
-    transition: all 300ms linear;
-    opacity: 0;
-    font-size: 0.85em;
+@media screen and (min-width: 480px) and (min-height: 854px) {
+  .projects .project-container {
+    width: 400px;
+    height: 280px;
   }
 }
 
-@media screen and (max-width: 414px) and (max-height: 896px) {
-  .projects .hover-exit {
-    margin: 2%;
-    width: 80%;
-    height: 30%;
+@media screen and (min-width: 960px) and (min-height: 540px) {
+  .projects .project-container {
+    width: 400px;
+    height: 280px;
   }
-  .projects .hover-enter {
-    margin: 2%;
-    width: 80%;
-    height: 30%;
+  .projects .project-container .project-img-container {
+    height: 205.757px;
+  }
+}
+
+@media screen and (min-width: 1024px) and (min-height: 640px) {
+  .projects {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
 /*# sourceMappingURL=projects.css.map */

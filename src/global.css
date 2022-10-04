@@ -16,9 +16,9 @@
 
 .App .sections {
   width: 100%;
-  height: calc(100vh - 150px);
+  height: calc(100vh - 100px);
   position: relative;
-  top: 150px;
+  top: 100px;
   scroll-behavior: smooth;
   -ms-scroll-snap-type: y mandatory;
       scroll-snap-type: y mandatory;

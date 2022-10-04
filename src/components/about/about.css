@@ -16,9 +16,9 @@
 
 .App .sections {
   width: 100%;
-  height: calc(100vh - 150px);
+  height: calc(100vh - 100px);
   position: relative;
-  top: 150px;
+  top: 100px;
   scroll-behavior: smooth;
   -ms-scroll-snap-type: y mandatory;
       scroll-snap-type: y mandatory;
@@ -50,7 +50,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-size: 0.8em;
+  font-size: 1em;
   padding-left: 5%;
   padding-right: 5%;
   line-height: 2;
@@ -59,6 +59,11 @@
 .about .skillset {
   margin-top: 10px;
   margin-bottom: 10px;
+}
+
+.about .skillset h3 {
+  text-align: center;
+  font-size: 28px;
 }
 
 .about .skillset .icons {
@@ -87,10 +92,5 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-
-h3 {
-  text-align: center;
-  font-size: 1.2em;
 }
 /*# sourceMappingURL=about.css.map */
