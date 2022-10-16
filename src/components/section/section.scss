@@ -3,7 +3,7 @@
 .about-section{
 	width:100%;
 	@include center-flex;
-	justify-content: start;
+	justify-content: flex-start;
 	scroll-snap-align: start;
 	font-size: 0.8em;
 	padding-left: 5%;

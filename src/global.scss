@@ -2,6 +2,9 @@
 $background-colour: #8ECAE6;
 $secondary: #023047;
 $blue-2: #219EBC;
+$box-shadow-light: rgba(255, 223, 107, 0.5);
+$box-shadow-dark:rgba(158, 124, 0, 0.5);
+
 
 //mixins
 @mixin center-flex {
@@ -11,7 +14,7 @@ $blue-2: #219EBC;
 	//width:100%;
 }
 @mixin inset-shadow{
-	box-shadow: inset -1px -1px 4px rgba(226, 241, 249, 0.5), inset 2px 2px 8px rgba(40, 135, 180, 0.6);
+	box-shadow: inset 1px 1px 2px rgba(148, 78, 0, 0.5), inset -1px -1px 1px rgba(255, 205, 148, 0.5);
 	transform: translate(2px,2px);
 	transition: all 200ms linear; 
 }

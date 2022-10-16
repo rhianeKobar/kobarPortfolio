@@ -18,7 +18,7 @@
   width: 100%;
   height: calc(100vh - 100px);
   position: relative;
-  top: 150px;
+  top: 100px;
   scroll-behavior: smooth;
   -ms-scroll-snap-type: y mandatory;
       scroll-snap-type: y mandatory;
@@ -80,7 +80,14 @@
     line-height: 2;
   }
   .connect .info {
-    width: 80%;
+    width: 75%;
+  }
+}
+
+@media screen and (min-width: 1366px) and (min-height: 768px) {
+  .connect {
+    font-size: 1.35em;
+    line-height: 2.4;
   }
 }
 

@@ -66,13 +66,14 @@
 
 .projects .project-container {
   width: 280px;
-  height: 190px;
+  height: 210px;
   margin: 20px;
   padding: 2%;
 }
 
 .projects .project-container h4 {
   width: 100%;
+  margin-bottom: 10px;
   text-align: center;
 }
 
@@ -80,8 +81,8 @@
   margin-top: 5px;
   border-radius: 20px;
   width: 100%;
-  -webkit-box-shadow: -2px -2px 8px rgba(226, 241, 249, 0.5), 2px 2px 8px rgba(40, 135, 180, 0.6);
-          box-shadow: -2px -2px 8px rgba(226, 241, 249, 0.5), 2px 2px 8px rgba(40, 135, 180, 0.6);
+  -webkit-box-shadow: -1px -1px 4px rgba(255, 205, 148, 0.5), 1px 1px 4px rgba(148, 78, 0, 0.5);
+          box-shadow: -1px -1px 4px rgba(255, 205, 148, 0.5), 1px 1px 4px rgba(148, 78, 0, 0.5);
   padding: 5%;
 }
 
@@ -91,10 +92,31 @@
   height: 100%;
 }
 
+.projects .close-container {
+  display: none;
+}
+
+.projects .project-modal {
+  width: 90%;
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  display: none;
+  -webkit-box-shadow: -1px -1px 4px rgba(255, 205, 148, 0.5), 1px 1px 4px rgba(148, 78, 0, 0.5);
+          box-shadow: -1px -1px 4px rgba(255, 205, 148, 0.5), 1px 1px 4px rgba(148, 78, 0, 0.5);
+}
+
+.projects .open-modal {
+  display: block;
+}
+
 @media screen and (min-width: 480px) and (min-height: 854px) {
   .projects .project-container {
     width: 400px;
     height: 280px;
+  }
+  .projects .project-container h4 {
+    font-size: 1.2em;
   }
 }
 
@@ -109,10 +131,34 @@
 }
 
 @media screen and (min-width: 1024px) and (min-height: 640px) {
+  .projects .project-container h4 {
+    font-size: 1.2em;
+  }
+}
+
+@media screen and (min-width: 1366px) and (min-height: 768px) {
   .projects {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+  }
+}
+
+@media screen and (min-width: 1920px) and (min-height: 1080px) {
+  .projects {
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+  }
+  .projects .project-container {
+    height: 380px;
+    width: 600px;
+  }
+  .projects .project-container h4 {
+    font-size: 1.7em;
+  }
+  .projects .project-container .project-img-container {
+    height: 90%;
   }
 }
 /*# sourceMappingURL=projects.css.map */

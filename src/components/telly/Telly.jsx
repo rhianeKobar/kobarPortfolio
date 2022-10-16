@@ -64,10 +64,10 @@ export default function Telly() {
 	return (
 		<div className='telly' data-testid="telly">
 			<div className="tv-buttons">
-				<button data-testid="prevBtn" className="btn" ref={prevBtn} disabled={clicked ? false : true} onClick={handlePrevBtn}  title='previous button'>
+				<button data-testid="prevBtn" className="btn" ref={prevBtn} disabled={clicked ? false : true} onClick={handlePrevBtn}  title='previous'>
 					<FeatherIcon icon='chevron-left' size='64' className='featherIcon'/>
 				</button>
-				<button data-testid="nextBtn" className="btn" ref={nextBtn} onClick={handleNextBtn} title='next button'>
+				<button data-testid="nextBtn" className="btn" ref={nextBtn} onClick={handleNextBtn} title='next'>
 					<FeatherIcon icon='chevron-right' size='64' className='featherIcon'/>
 				</button>
 			</div>	

@@ -6,9 +6,9 @@ import technologies from './skillsList'
 
 export default function About() {
 	return (
-		<div className='about' id="about">
+		<div className='about' id="about" title="About">
 			<Section 
-				header="About me "
+				title="About me "
 				emojii="😁"
 				aria="beaming face with smiling eyes"
 				content="Hi there, I'm Shakira, a Front-End Software Engineer! I build products that enhance people's lives, spaces and businesses while
@@ -33,7 +33,7 @@ export default function About() {
 				</div>
 			</div>
 			<Section
-				header= "Collabs "
+				title= "Collabs "
 				emojii="🙏"
 				aria="high five"
 				content="I'm open to roles in full-time or contract work and freelance projects. Ideally

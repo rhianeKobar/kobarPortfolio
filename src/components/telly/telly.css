@@ -18,7 +18,7 @@
   width: 100%;
   height: calc(100vh - 100px);
   position: relative;
-  top: 150px;
+  top: 100px;
   scroll-behavior: smooth;
   -ms-scroll-snap-type: y mandatory;
       scroll-snap-type: y mandatory;
@@ -39,74 +39,80 @@
 }
 
 .telly {
-  width: 317px;
-  height: 550px;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-rows: 3fr 1fr;
-      grid-template-rows: 3fr 1fr;
-  -ms-grid-row-align: center;
+  margin-top: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-item-align: center;
       align-self: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
 }
 
 @-webkit-keyframes fade-in {
   0% {
-    -webkit-box-shadow: inset -1px -1px 4px rgba(226, 241, 249, 0.5), inset 2px 2px 8px rgba(40, 135, 180, 0.6);
-            box-shadow: inset -1px -1px 4px rgba(226, 241, 249, 0.5), inset 2px 2px 8px rgba(40, 135, 180, 0.6);
+    -webkit-box-shadow: inset -1px -1px 4px rgba(255, 205, 148, 0.5), inset 2px 2px 8px rgba(148, 78, 0, 0.5);
+            box-shadow: inset -1px -1px 4px rgba(255, 205, 148, 0.5), inset 2px 2px 8px rgba(148, 78, 0, 0.5);
     -webkit-transform: translate(2px, 2px);
             transform: translate(2px, 2px);
   }
   33% {
-    -webkit-box-shadow: inset -1px -1px 2px rgba(226, 241, 249, 0.5), inset 1px 1px 4px rgba(40, 135, 180, 0.6);
-            box-shadow: inset -1px -1px 2px rgba(226, 241, 249, 0.5), inset 1px 1px 4px rgba(40, 135, 180, 0.6);
+    -webkit-box-shadow: inset -1px -1px 2px rgba(255, 205, 148, 0.5), inset 1px 1px 4px rgba(148, 78, 0, 0.5);
+            box-shadow: inset -1px -1px 2px rgba(255, 205, 148, 0.5), inset 1px 1px 4px rgba(148, 78, 0, 0.5);
     -webkit-transform: translate(1px, 1px);
             transform: translate(1px, 1px);
   }
   66% {
-    -webkit-box-shadow: -1px -1px 4px rgba(226, 241, 249, 0.5), 1px 1px 4px rgba(40, 135, 180, 0.6);
-            box-shadow: -1px -1px 4px rgba(226, 241, 249, 0.5), 1px 1px 4px rgba(40, 135, 180, 0.6);
+    -webkit-box-shadow: -1px -1px 4px rgba(255, 205, 148, 0.5), 1px 1px 4px rgba(148, 78, 0, 0.5);
+            box-shadow: -1px -1px 4px rgba(255, 205, 148, 0.5), 1px 1px 4px rgba(148, 78, 0, 0.5);
   }
   100% {
-    -webkit-box-shadow: -2px -2px 8px rgba(226, 241, 249, 0.5), 2px 2px 8px rgba(40, 135, 180, 0.6);
-            box-shadow: -2px -2px 8px rgba(226, 241, 249, 0.5), 2px 2px 8px rgba(40, 135, 180, 0.6);
+    -webkit-box-shadow: -2px -2px 8px rgba(255, 205, 148, 0.5), 2px 2px 8px rgba(148, 78, 0, 0.5);
+            box-shadow: -2px -2px 8px rgba(255, 205, 148, 0.5), 2px 2px 8px rgba(148, 78, 0, 0.5);
   }
 }
 
 @keyframes fade-in {
   0% {
-    -webkit-box-shadow: inset -1px -1px 4px rgba(226, 241, 249, 0.5), inset 2px 2px 8px rgba(40, 135, 180, 0.6);
-            box-shadow: inset -1px -1px 4px rgba(226, 241, 249, 0.5), inset 2px 2px 8px rgba(40, 135, 180, 0.6);
+    -webkit-box-shadow: inset -1px -1px 4px rgba(255, 205, 148, 0.5), inset 2px 2px 8px rgba(148, 78, 0, 0.5);
+            box-shadow: inset -1px -1px 4px rgba(255, 205, 148, 0.5), inset 2px 2px 8px rgba(148, 78, 0, 0.5);
     -webkit-transform: translate(2px, 2px);
             transform: translate(2px, 2px);
   }
   33% {
-    -webkit-box-shadow: inset -1px -1px 2px rgba(226, 241, 249, 0.5), inset 1px 1px 4px rgba(40, 135, 180, 0.6);
-            box-shadow: inset -1px -1px 2px rgba(226, 241, 249, 0.5), inset 1px 1px 4px rgba(40, 135, 180, 0.6);
+    -webkit-box-shadow: inset -1px -1px 2px rgba(255, 205, 148, 0.5), inset 1px 1px 4px rgba(148, 78, 0, 0.5);
+            box-shadow: inset -1px -1px 2px rgba(255, 205, 148, 0.5), inset 1px 1px 4px rgba(148, 78, 0, 0.5);
     -webkit-transform: translate(1px, 1px);
             transform: translate(1px, 1px);
   }
   66% {
-    -webkit-box-shadow: -1px -1px 4px rgba(226, 241, 249, 0.5), 1px 1px 4px rgba(40, 135, 180, 0.6);
-            box-shadow: -1px -1px 4px rgba(226, 241, 249, 0.5), 1px 1px 4px rgba(40, 135, 180, 0.6);
+    -webkit-box-shadow: -1px -1px 4px rgba(255, 205, 148, 0.5), 1px 1px 4px rgba(148, 78, 0, 0.5);
+            box-shadow: -1px -1px 4px rgba(255, 205, 148, 0.5), 1px 1px 4px rgba(148, 78, 0, 0.5);
   }
   100% {
-    -webkit-box-shadow: -2px -2px 8px rgba(226, 241, 249, 0.5), 2px 2px 8px rgba(40, 135, 180, 0.6);
-            box-shadow: -2px -2px 8px rgba(226, 241, 249, 0.5), 2px 2px 8px rgba(40, 135, 180, 0.6);
+    -webkit-box-shadow: -2px -2px 8px rgba(255, 205, 148, 0.5), 2px 2px 8px rgba(148, 78, 0, 0.5);
+            box-shadow: -2px -2px 8px rgba(255, 205, 148, 0.5), 2px 2px 8px rgba(148, 78, 0, 0.5);
   }
 }
 
 .telly .tv-screen {
-  -ms-grid-column-align: center;
-      justify-self: center;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
-  padding: 10%;
-  margin: 1%;
+  height: auto;
+  width: auto;
+  padding: 8%;
+  margin: 5%;
   background-color: #8ECAE6;
   border-radius: 25px;
-  -webkit-box-shadow: -2px -2px 8px rgba(226, 241, 249, 0.5), 2px 2px 8px rgba(40, 135, 180, 0.6);
-          box-shadow: -2px -2px 8px rgba(226, 241, 249, 0.5), 2px 2px 8px rgba(40, 135, 180, 0.6);
+  -webkit-box-shadow: -2px -2px 8px rgba(255, 205, 148, 0.5), 2px 2px 8px rgba(148, 78, 0, 0.5);
+          box-shadow: -2px -2px 8px rgba(255, 205, 148, 0.5), 2px 2px 8px rgba(148, 78, 0, 0.5);
   -webkit-animation-name: fade-in;
           animation-name: fade-in;
   -webkit-animation-duration: 1s;
@@ -122,8 +128,6 @@
   margin-left: auto;
   margin-right: auto;
   border-radius: 5%;
-  width: 100%;
-  height: 100%;
   margin: 1%;
 }
 
@@ -222,9 +226,8 @@
 }
 
 .telly .tv-screen .animate {
-  height: 70%;
+  height: 85%;
   width: 100%;
-  margin-top: 15%;
   -webkit-animation-name: wave;
           animation-name: wave;
   -webkit-animation-duration: 3s;
@@ -233,23 +236,31 @@
           animation-timing-function: linear;
   -webkit-animation-iteration-count: infinite;
           animation-iteration-count: infinite;
+  margin-top: 20px;
 }
 
 .telly .tv-screen .fit-image {
-  max-height: 300px;
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .telly .tv-buttons {
+  width: 100%;
   border-radius: 10px;
+  z-index: 6;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  padding: 5%;
 }
 
 .telly .tv-buttons button {
@@ -258,13 +269,12 @@
 
 .telly .tv-buttons .btn {
   color: #023047;
-  border-radius: 100px;
-  width: 63.61px;
-  height: 64.38px;
+  width: 40px;
+  height: 40px;
   background: #8ECAE6;
-  -webkit-box-shadow: -2px -2px 8px rgba(237, 237, 237, 0.5), 2px 2px 8px rgba(40, 135, 180, 0.6);
-          box-shadow: -2px -2px 8px rgba(237, 237, 237, 0.5), 2px 2px 8px rgba(40, 135, 180, 0.6);
-  border-radius: 20px;
+  -webkit-box-shadow: -1px -1px 4px rgba(255, 205, 148, 0.5), 1px 1px 4px rgba(148, 78, 0, 0.5);
+          box-shadow: -1px -1px 4px rgba(255, 205, 148, 0.5), 1px 1px 4px rgba(148, 78, 0, 0.5);
+  border-radius: 8px;
   cursor: pointer;
   -webkit-transition: all 200ms linear;
   transition: all 200ms linear;
@@ -326,43 +336,38 @@
   transition: all 200ms linear;
 }
 
-.telly .image {
-  height: 10%;
-  width: 3.5%;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-}
-
-@media screen and (max-width: 1366px) and (max-height: 768px) {
+@media screen and (min-width: 960px) and (min-height: 540px) {
   .telly {
-    height: 400px;
-    padding: 1%;
+    width: 40%;
   }
   .telly .tv-screen {
-    padding: 4%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
-  .telly .tv-buttons .btn {
-    width: 50px;
-    height: 50px;
+  .telly .tv-screen .animate {
+    margin-left: 15px;
+    height: 100%;
+    width: 85%;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
   }
-  .telly .image {
-    height: 13%;
-    width: 3.5%;
-    -ms-flex-item-align: start;
-        align-self: flex-start;
+  .telly .tv-screen .fit-image {
+    -o-object-fit: fill;
+       object-fit: fill;
   }
 }
 
-@media screen and (max-width: 414px) and (max-height: 896px) {
-  .telly .animate {
-    margin-top: 50px;
+@media screen and (min-width: 1024px) and (min-height: 640px) {
+  .telly .tv-screen {
+    padding: 5%;
   }
-  .telly .image {
-    height: 10%;
-    width: 11%;
-    -ms-flex-item-align: start;
-        align-self: flex-start;
+}
+
+@media screen and (min-width: 1920px) and (min-height: 1080px) {
+  .telly .tv-screen {
+    padding: 3%;
   }
 }
 /*# sourceMappingURL=telly.css.map */

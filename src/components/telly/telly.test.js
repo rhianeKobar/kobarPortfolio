@@ -5,8 +5,8 @@ import Telly from './Telly';
 
 render(<Telly/>)
 const telly = screen.getByTestId("telly")
-const prevBtn = screen.getByTitle(/previous button/)
-const nextBtn = screen.getByTitle(/next button/)
+const prevBtn = screen.getByTitle(/previous/)
+const nextBtn = screen.getByTitle(/next/)
 
 describe("Telly component",() => {
 

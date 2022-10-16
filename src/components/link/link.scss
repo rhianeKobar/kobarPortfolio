@@ -1,0 +1,18 @@
+@import "../../global.scss";
+
+.link{
+	cursor: pointer;
+	position: relative;
+	color: $secondary;
+	height:50px;
+	width:50px;
+	@include center-flex;
+	justify-content: center;
+	border-radius: 100%;
+	box-shadow: -1px -1px 4px $box-shadow-light, 1px 1px 4px $box-shadow-dark;
+}
+
+.link:hover{
+	color: $blue-2;
+	box-shadow: inset -2px -2px 8px $box-shadow-light, inset 2px 2px 8px $box-shadow-dark;
+}
