@@ -48,7 +48,8 @@ export default function Projects() {
 					{clickedProject.tools}
 				</div>
 				<div className="modal-footer">
-					<button onClick={()=>{openInNewTab(clickedProject.url)}} className="modal-code-btn">View code</button>
+					<button onClick={()=>{openInNewTab(clickedProject.code)}} className="modal-code-btn">View code</button>
+					{clickedProject.url && <button onClick={()=>{openInNewTab(clickedProject.url)}} className="modal-code-btn">View project</button>}
 				</div>
 			</div>
 		</div>
